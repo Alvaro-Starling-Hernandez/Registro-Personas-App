@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="margin_wide">8dp</dimen>
+    <dimen name="margin_xlWide">16dp</dimen>
+
+</resources>
