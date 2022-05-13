@@ -72,7 +72,7 @@ class PersonasFragment : Fragment(), AdapterView.OnItemSelectedListener {
     }
 
     override fun onNothingSelected(p0: AdapterView<*>?) {
-        TODO("Not yet implemented")
+
     }
 
     fun LlenarCampos(){
@@ -83,7 +83,7 @@ class PersonasFragment : Fragment(), AdapterView.OnItemSelectedListener {
             binding.nombresEditText.setText(it.nombres)
             binding.emailEditText.setText(it.email)
             binding.salarioEditText.setText(it.salario.toString())
-            binding.ocupacionSpinner.getItemAtPosition(ocupacionId+1)
+//            binding.ocupacionSpinner.setSelection
         }
     }
 
