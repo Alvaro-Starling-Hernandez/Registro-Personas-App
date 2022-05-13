@@ -1,6 +1,5 @@
 package com.example.registropersonasapp.views.personas
 
-import androidx.lifecycle.ViewModelProvider
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -11,9 +10,6 @@ import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.flowWithLifecycle
 import androidx.lifecycle.lifecycleScope
 import androidx.navigation.fragment.findNavController
-import androidx.navigation.fragment.navArgs
-import com.example.registropersonasapp.R
-import com.example.registropersonasapp.databinding.ActivityMainBinding
 import com.example.registropersonasapp.databinding.ListaPersonasFragmentBinding
 import com.example.registropersonasapp.model.Persona
 import dagger.hilt.android.AndroidEntryPoint
@@ -39,7 +35,7 @@ class ListaPersonasFragment : Fragment() {
 
         lifecycleScope.launch {
             viewModel.personas.flowWithLifecycle(lifecycle, Lifecycle.State.STARTED).
-            collect { lista ->
+            collect {lista ->
                 adapter.submitList(lista)
             }
         }
