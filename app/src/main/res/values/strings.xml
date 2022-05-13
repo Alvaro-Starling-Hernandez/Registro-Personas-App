@@ -6,5 +6,6 @@
     <string name="hint_salario">Salario</string>
     <string name="guardar">Guardar</string>
     <string name="agregar">Agregar</string>
+    <string name="seleccione_una_ocupacion">Seleccione una ocupacion</string>
 
 </resources>
