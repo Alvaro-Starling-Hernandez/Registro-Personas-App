@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Registro Personas App</string>
+    <string name="hint_nombres">Nombres</string>
+    <string name="hint_email">Email</string>
+    <string name="hint_ocupacion">Ocupación</string>
+    <string name="hint_salario">Salario</string>
+    <string name="guardar">Guardar</string>
+    <string name="agregar">Agregar</string>
+
+</resources>
