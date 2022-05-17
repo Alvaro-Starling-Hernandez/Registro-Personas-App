@@ -13,6 +13,9 @@ interface PersonaDao {
     @Delete
     suspend fun Eliminar(persona: Persona)
 
+    @Query("SELECT * FROM personas WHERE personaId = :id")
+    suspend fun GetById(id : Int) : Persona
+
     @Query("SELECT * FROM personas ORDER BY personaId")
     fun GetLista(): Flow<List<Persona>>
 }
