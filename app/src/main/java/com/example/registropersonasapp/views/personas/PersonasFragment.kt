@@ -57,6 +57,13 @@ class PersonasFragment : Fragment(), AdapterView.OnItemSelectedListener {
             )
         }
 
+        binding.eliminarButton.setOnClickListener {
+            args.persona?.let { it1 -> viewModel.eliminar(it1) }
+            Snackbar.make(binding.salarioEditText, "Eliminado", Snackbar.LENGTH_LONG).show()
+            findNavController().navigateUp()
+        }
+
+
         viewModel.guardado.observe(viewLifecycleOwner){
             if (it) {
                 Snackbar.make(binding.salarioEditText, "Guardo", Snackbar.LENGTH_LONG).show()
@@ -83,7 +90,6 @@ class PersonasFragment : Fragment(), AdapterView.OnItemSelectedListener {
             binding.nombresEditText.setText(it.nombres)
             binding.emailEditText.setText(it.email)
             binding.salarioEditText.setText(it.salario.toString())
-//            binding.ocupacionSpinner.setSelection
         }
     }
 
