@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.AdapterView
 import android.widget.ArrayAdapter
+import androidx.core.view.isVisible
 import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
@@ -55,6 +56,10 @@ class PersonasFragment : Fragment(), AdapterView.OnItemSelectedListener {
                     binding.salarioEditText.floatValue()
                 )
             )
+        }
+
+        if(args.persona == null){
+            binding.eliminarButton.visibility = View.GONE
         }
 
         binding.eliminarButton.setOnClickListener {
