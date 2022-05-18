@@ -17,6 +17,7 @@ import javax.inject.Inject
 class OcupacionesViewModel @Inject constructor(
     val ocupacionDao : OcupacionDao
 ): ViewModel() {
+
     val ocupaciones : Flow<List<Ocupacion>>
         get() =  ocupacionDao.GetLista()
 
