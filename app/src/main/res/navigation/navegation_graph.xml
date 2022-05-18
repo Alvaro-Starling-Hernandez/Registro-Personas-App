@@ -24,5 +24,19 @@
             app:argType="com.example.registropersonasapp.model.Persona"
             app:nullable="true"
             android:defaultValue="@null" />
+        <action
+            android:id="@+id/action_to_ocupacionesFragment"
+            app:destination="@id/ocupacionesFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/ocupacionesFragment"
+        android:name="com.example.registropersonasapp.views.personas.OcupacionesFragment"
+        android:label="ocupaciones_fragment"
+        tools:layout="@layout/ocupaciones_fragment" >
+        <argument
+            android:name="ocupacion"
+            app:argType="com.example.registropersonasapp.model.Ocupacion"
+            app:nullable="true"
+            android:defaultValue="@null" />
     </fragment>
 </navigation>
