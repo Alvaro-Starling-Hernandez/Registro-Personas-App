@@ -76,22 +76,38 @@
         android:id="@+id/ocupacionSpinner"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
         android:layout_margin="@dimen/margin_xlWide"
-        app:layout_constraintTop_toBottomOf="@+id/salarioTextInput"/>
+        app:layout_constraintBottom_toTopOf="@+id/guardarButton"
+        app:layout_constraintEnd_toStartOf="@+id/agregarOcupacionButton"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/salarioTextInput"
+        app:layout_constraintVertical_bias="0.10" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/agregarOcupacionButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin_xlWide"
+        app:layout_constraintVertical_bias="0.10"
+        android:text="@string/agregar"
+        android:backgroundTint="@color/teal_700"
+        app:layout_constraintBottom_toTopOf="@+id/eliminarButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/ocupacionSpinner"
+        app:layout_constraintTop_toBottomOf="@+id/salarioTextInput" />
+
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/eliminarButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="@dimen/margin_xlWide"
+        android:backgroundTint="@color/red"
         android:text="@string/eliminar"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/guardarButton"
-        app:layout_constraintTop_toBottomOf="@+id/salarioTextInput"
-        android:backgroundTint="@color/red"/>
+        app:layout_constraintTop_toBottomOf="@+id/salarioTextInput" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

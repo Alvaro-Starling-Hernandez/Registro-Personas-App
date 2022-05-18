@@ -11,7 +11,9 @@ import androidx.navigation.fragment.navArgs
 import com.example.registropersonasapp.databinding.OcupacionesFragmentBinding
 import com.example.registropersonasapp.model.Ocupacion
 import com.google.android.material.snackbar.Snackbar
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class OcupacionesFragment : Fragment() {
 
     private val viewModel: OcupacionesViewModel by viewModels()
@@ -46,6 +48,5 @@ class OcupacionesFragment : Fragment() {
 
         return binding.root
     }
-
 
 }

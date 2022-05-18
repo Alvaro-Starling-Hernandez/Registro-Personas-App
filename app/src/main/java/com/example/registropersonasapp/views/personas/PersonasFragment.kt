@@ -12,6 +12,7 @@ import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
 import com.example.registropersonasapp.databinding.PersonasFragmentBinding
+import com.example.registropersonasapp.model.Ocupacion
 import com.example.registropersonasapp.model.Persona
 import com.google.android.material.snackbar.Snackbar
 import com.google.android.material.textfield.TextInputEditText
@@ -45,6 +46,10 @@ class PersonasFragment : Fragment(), AdapterView.OnItemSelectedListener {
 
         binding.ocupacionSpinner.adapter = aaOcupaciones
         aaOcupaciones.addAll(Arrays.asList("Vendedor", "Ingeniero", "Cocinero", "Profesor", "Estudiante"))
+
+        binding.agregarOcupacionButton.setOnClickListener {
+            openOcupacionesFragment()
+        }
 
         binding.guardarButton.setOnClickListener {
             viewModel.guardar(
@@ -99,5 +104,10 @@ class PersonasFragment : Fragment(), AdapterView.OnItemSelectedListener {
     }
 
     fun TextInputEditText.floatValue() = text.toString().toFloatOrNull() ?: 0.0f
+
+    fun openOcupacionesFragment(ocupacion: Ocupacion?=null)  {
+        val action = PersonasFragmentDirections.actionToOcupacionesFragment(ocupacion)
+        findNavController().navigate(action)
+    }
 
 }
