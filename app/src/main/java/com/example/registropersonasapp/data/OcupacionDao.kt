@@ -5,7 +5,7 @@ import com.example.registropersonasapp.model.Ocupacion
 import kotlinx.coroutines.flow.Flow
 
 @Dao
-interface OcupacionesDao {
+interface OcupacionDao {
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     suspend fun Insertar(ocupacion: Ocupacion)
 
